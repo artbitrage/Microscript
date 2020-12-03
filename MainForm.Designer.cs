@@ -125,6 +125,7 @@ namespace Microscript
             // 
             // pnl_Logo
             // 
+            this.pnl_Logo.BackColor = System.Drawing.SystemColors.Control;
             this.pnl_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_Logo.BackgroundImage")));
             this.pnl_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnl_Logo.Location = new System.Drawing.Point(3, 27);
@@ -144,6 +145,7 @@ namespace Microscript
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.scanToolStripMenuItem});
@@ -165,13 +167,13 @@ namespace Microscript
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -218,6 +220,7 @@ namespace Microscript
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.pnl_MainForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
