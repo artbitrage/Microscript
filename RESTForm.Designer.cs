@@ -31,7 +31,7 @@ namespace Microscript
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RESTForm));
             this.lv_Result = new System.Windows.Forms.ListView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_Conf = new System.Windows.Forms.Panel();
             this.btn_CustomSOAP = new System.Windows.Forms.Button();
             this.cbx_Debug = new System.Windows.Forms.CheckBox();
             this.cbx_XMLReport = new System.Windows.Forms.CheckBox();
@@ -40,7 +40,13 @@ namespace Microscript
             this.lbl_Config = new System.Windows.Forms.Label();
             this.cbx_StaticScan = new System.Windows.Forms.CheckBox();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
+            this.btn_Scan = new System.Windows.Forms.Button();
+            this.btn_JSON = new System.Windows.Forms.Button();
             this.grpBox_Auth = new System.Windows.Forms.GroupBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lbl_Password = new System.Windows.Forms.Label();
+            this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_ContentType = new System.Windows.Forms.Label();
             this.lbl_PostData = new System.Windows.Forms.Label();
             this.cmbContentType = new System.Windows.Forms.ComboBox();
@@ -49,13 +55,7 @@ namespace Microscript
             this.txtURL = new System.Windows.Forms.TextBox();
             this.lbl_Method = new System.Windows.Forms.Label();
             this.lbl_URL = new System.Windows.Forms.Label();
-            this.lbl_Password = new System.Windows.Forms.Label();
-            this.lbl_Username = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btn_JSON = new System.Windows.Forms.Button();
-            this.btn_Scan = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.pnl_Conf.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
             this.grpBox_Auth.SuspendLayout();
             this.SuspendLayout();
@@ -65,26 +65,26 @@ namespace Microscript
             this.lv_Result.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lv_Result.HideSelection = false;
             this.lv_Result.LabelWrap = false;
-            this.lv_Result.Location = new System.Drawing.Point(12, 182);
+            this.lv_Result.Location = new System.Drawing.Point(12, 193);
             this.lv_Result.Name = "lv_Result";
-            this.lv_Result.Size = new System.Drawing.Size(409, 217);
+            this.lv_Result.Size = new System.Drawing.Size(425, 245);
             this.lv_Result.TabIndex = 0;
             this.lv_Result.UseCompatibleStateImageBehavior = false;
             this.lv_Result.View = System.Windows.Forms.View.Details;
             // 
-            // panel1
+            // pnl_Conf
             // 
-            this.panel1.Controls.Add(this.btn_CustomSOAP);
-            this.panel1.Controls.Add(this.cbx_Debug);
-            this.panel1.Controls.Add(this.cbx_XMLReport);
-            this.panel1.Controls.Add(this.cbx_InfoDisclo);
-            this.panel1.Controls.Add(this.cbx_DynamicScan);
-            this.panel1.Controls.Add(this.lbl_Config);
-            this.panel1.Controls.Add(this.cbx_StaticScan);
-            this.panel1.Location = new System.Drawing.Point(427, 182);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(162, 217);
-            this.panel1.TabIndex = 1;
+            this.pnl_Conf.Controls.Add(this.btn_CustomSOAP);
+            this.pnl_Conf.Controls.Add(this.cbx_Debug);
+            this.pnl_Conf.Controls.Add(this.cbx_XMLReport);
+            this.pnl_Conf.Controls.Add(this.cbx_InfoDisclo);
+            this.pnl_Conf.Controls.Add(this.cbx_DynamicScan);
+            this.pnl_Conf.Controls.Add(this.lbl_Config);
+            this.pnl_Conf.Controls.Add(this.cbx_StaticScan);
+            this.pnl_Conf.Location = new System.Drawing.Point(443, 221);
+            this.pnl_Conf.Name = "pnl_Conf";
+            this.pnl_Conf.Size = new System.Drawing.Size(162, 217);
+            this.pnl_Conf.TabIndex = 0;
             // 
             // btn_CustomSOAP
             // 
@@ -92,7 +92,7 @@ namespace Microscript
             this.btn_CustomSOAP.Location = new System.Drawing.Point(19, 166);
             this.btn_CustomSOAP.Name = "btn_CustomSOAP";
             this.btn_CustomSOAP.Size = new System.Drawing.Size(121, 35);
-            this.btn_CustomSOAP.TabIndex = 2;
+            this.btn_CustomSOAP.TabIndex = 13;
             this.btn_CustomSOAP.Text = "Custom SOAP Tags";
             this.btn_CustomSOAP.UseVisualStyleBackColor = true;
             // 
@@ -103,7 +103,7 @@ namespace Microscript
             this.cbx_Debug.Location = new System.Drawing.Point(19, 134);
             this.cbx_Debug.Name = "cbx_Debug";
             this.cbx_Debug.Size = new System.Drawing.Size(58, 17);
-            this.cbx_Debug.TabIndex = 7;
+            this.cbx_Debug.TabIndex = 12;
             this.cbx_Debug.Text = "Debug";
             this.cbx_Debug.UseVisualStyleBackColor = true;
             // 
@@ -114,7 +114,7 @@ namespace Microscript
             this.cbx_XMLReport.Location = new System.Drawing.Point(19, 111);
             this.cbx_XMLReport.Name = "cbx_XMLReport";
             this.cbx_XMLReport.Size = new System.Drawing.Size(83, 17);
-            this.cbx_XMLReport.TabIndex = 6;
+            this.cbx_XMLReport.TabIndex = 11;
             this.cbx_XMLReport.Text = "XML Report";
             this.cbx_XMLReport.UseVisualStyleBackColor = true;
             // 
@@ -125,7 +125,7 @@ namespace Microscript
             this.cbx_InfoDisclo.Location = new System.Drawing.Point(19, 88);
             this.cbx_InfoDisclo.Name = "cbx_InfoDisclo";
             this.cbx_InfoDisclo.Size = new System.Drawing.Size(99, 17);
-            this.cbx_InfoDisclo.TabIndex = 5;
+            this.cbx_InfoDisclo.TabIndex = 11;
             this.cbx_InfoDisclo.Text = "Info. Disclosure";
             this.cbx_InfoDisclo.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +136,7 @@ namespace Microscript
             this.cbx_DynamicScan.Location = new System.Drawing.Point(19, 65);
             this.cbx_DynamicScan.Name = "cbx_DynamicScan";
             this.cbx_DynamicScan.Size = new System.Drawing.Size(95, 17);
-            this.cbx_DynamicScan.TabIndex = 4;
+            this.cbx_DynamicScan.TabIndex = 10;
             this.cbx_DynamicScan.Text = "Dynamic Scan";
             this.cbx_DynamicScan.UseVisualStyleBackColor = true;
             // 
@@ -147,7 +147,7 @@ namespace Microscript
             this.lbl_Config.Location = new System.Drawing.Point(16, 14);
             this.lbl_Config.Name = "lbl_Config";
             this.lbl_Config.Size = new System.Drawing.Size(88, 13);
-            this.lbl_Config.TabIndex = 3;
+            this.lbl_Config.TabIndex = 0;
             this.lbl_Config.Text = "Configurations";
             // 
             // cbx_StaticScan
@@ -157,7 +157,7 @@ namespace Microscript
             this.cbx_StaticScan.Location = new System.Drawing.Point(19, 42);
             this.cbx_StaticScan.Name = "cbx_StaticScan";
             this.cbx_StaticScan.Size = new System.Drawing.Size(81, 17);
-            this.cbx_StaticScan.TabIndex = 2;
+            this.cbx_StaticScan.TabIndex = 9;
             this.cbx_StaticScan.Text = "Static Scan";
             this.cbx_StaticScan.UseVisualStyleBackColor = true;
             // 
@@ -176,8 +176,28 @@ namespace Microscript
             this.pnl_Dashboard.Controls.Add(this.lbl_URL);
             this.pnl_Dashboard.Location = new System.Drawing.Point(12, 12);
             this.pnl_Dashboard.Name = "pnl_Dashboard";
-            this.pnl_Dashboard.Size = new System.Drawing.Size(577, 164);
-            this.pnl_Dashboard.TabIndex = 2;
+            this.pnl_Dashboard.Size = new System.Drawing.Size(593, 175);
+            this.pnl_Dashboard.TabIndex = 0;
+            // 
+            // btn_Scan
+            // 
+            this.btn_Scan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Scan.Location = new System.Drawing.Point(316, 133);
+            this.btn_Scan.Name = "btn_Scan";
+            this.btn_Scan.Size = new System.Drawing.Size(75, 23);
+            this.btn_Scan.TabIndex = 6;
+            this.btn_Scan.Text = "Scan";
+            this.btn_Scan.UseVisualStyleBackColor = true;
+            // 
+            // btn_JSON
+            // 
+            this.btn_JSON.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_JSON.Location = new System.Drawing.Point(316, 37);
+            this.btn_JSON.Name = "btn_JSON";
+            this.btn_JSON.Size = new System.Drawing.Size(75, 23);
+            this.btn_JSON.TabIndex = 3;
+            this.btn_JSON.Text = "JSON";
+            this.btn_JSON.UseVisualStyleBackColor = true;
             // 
             // grpBox_Auth
             // 
@@ -187,10 +207,44 @@ namespace Microscript
             this.grpBox_Auth.Controls.Add(this.lbl_Username);
             this.grpBox_Auth.Location = new System.Drawing.Point(397, 10);
             this.grpBox_Auth.Name = "grpBox_Auth";
-            this.grpBox_Auth.Size = new System.Drawing.Size(177, 146);
-            this.grpBox_Auth.TabIndex = 8;
+            this.grpBox_Auth.Size = new System.Drawing.Size(193, 146);
+            this.grpBox_Auth.TabIndex = 0;
             this.grpBox_Auth.TabStop = false;
             this.grpBox_Auth.Text = "Basic Authentication";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(18, 99);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(156, 20);
+            this.txtPassword.TabIndex = 8;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(18, 45);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(156, 20);
+            this.txtUsername.TabIndex = 7;
+            // 
+            // lbl_Password
+            // 
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Location = new System.Drawing.Point(17, 83);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(53, 13);
+            this.lbl_Password.TabIndex = 0;
+            this.lbl_Password.Text = "Password";
+            // 
+            // lbl_Username
+            // 
+            this.lbl_Username.AutoSize = true;
+            this.lbl_Username.Location = new System.Drawing.Point(15, 29);
+            this.lbl_Username.Name = "lbl_Username";
+            this.lbl_Username.Size = new System.Drawing.Size(55, 13);
+            this.lbl_Username.TabIndex = 0;
+            this.lbl_Username.Text = "Username";
             // 
             // lbl_ContentType
             // 
@@ -198,7 +252,7 @@ namespace Microscript
             this.lbl_ContentType.Location = new System.Drawing.Point(7, 138);
             this.lbl_ContentType.Name = "lbl_ContentType";
             this.lbl_ContentType.Size = new System.Drawing.Size(71, 13);
-            this.lbl_ContentType.TabIndex = 7;
+            this.lbl_ContentType.TabIndex = 0;
             this.lbl_ContentType.Text = "Content Type";
             // 
             // lbl_PostData
@@ -207,7 +261,7 @@ namespace Microscript
             this.lbl_PostData.Location = new System.Drawing.Point(24, 72);
             this.lbl_PostData.Name = "lbl_PostData";
             this.lbl_PostData.Size = new System.Drawing.Size(54, 13);
-            this.lbl_PostData.TabIndex = 6;
+            this.lbl_PostData.TabIndex = 0;
             this.lbl_PostData.Text = "Post Data";
             // 
             // cmbContentType
@@ -237,14 +291,14 @@ namespace Microscript
             this.cmbMethods.Location = new System.Drawing.Point(84, 39);
             this.cmbMethods.Name = "cmbMethods";
             this.cmbMethods.Size = new System.Drawing.Size(209, 21);
-            this.cmbMethods.TabIndex = 3;
+            this.cmbMethods.TabIndex = 2;
             // 
             // txtURL
             // 
             this.txtURL.Location = new System.Drawing.Point(84, 10);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(307, 20);
-            this.txtURL.TabIndex = 2;
+            this.txtURL.TabIndex = 1;
             // 
             // lbl_Method
             // 
@@ -252,7 +306,7 @@ namespace Microscript
             this.lbl_Method.Location = new System.Drawing.Point(35, 42);
             this.lbl_Method.Name = "lbl_Method";
             this.lbl_Method.Size = new System.Drawing.Size(43, 13);
-            this.lbl_Method.TabIndex = 1;
+            this.lbl_Method.TabIndex = 0;
             this.lbl_Method.Text = "Method";
             // 
             // lbl_URL
@@ -264,66 +318,14 @@ namespace Microscript
             this.lbl_URL.TabIndex = 0;
             this.lbl_URL.Text = "URL";
             // 
-            // lbl_Password
-            // 
-            this.lbl_Password.AutoSize = true;
-            this.lbl_Password.Location = new System.Drawing.Point(17, 83);
-            this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(53, 13);
-            this.lbl_Password.TabIndex = 3;
-            this.lbl_Password.Text = "Password";
-            // 
-            // lbl_Username
-            // 
-            this.lbl_Username.AutoSize = true;
-            this.lbl_Username.Location = new System.Drawing.Point(15, 29);
-            this.lbl_Username.Name = "lbl_Username";
-            this.lbl_Username.Size = new System.Drawing.Size(55, 13);
-            this.lbl_Username.TabIndex = 4;
-            this.lbl_Username.Text = "Username";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(18, 45);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(140, 20);
-            this.txtUsername.TabIndex = 5;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(18, 99);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(140, 20);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // btn_JSON
-            // 
-            this.btn_JSON.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_JSON.Location = new System.Drawing.Point(316, 37);
-            this.btn_JSON.Name = "btn_JSON";
-            this.btn_JSON.Size = new System.Drawing.Size(75, 23);
-            this.btn_JSON.TabIndex = 9;
-            this.btn_JSON.Text = "JSON";
-            this.btn_JSON.UseVisualStyleBackColor = true;
-            // 
-            // btn_Scan
-            // 
-            this.btn_Scan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Scan.Location = new System.Drawing.Point(316, 133);
-            this.btn_Scan.Name = "btn_Scan";
-            this.btn_Scan.Size = new System.Drawing.Size(75, 23);
-            this.btn_Scan.TabIndex = 10;
-            this.btn_Scan.Text = "Scan";
-            this.btn_Scan.UseVisualStyleBackColor = true;
-            // 
             // RESTForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 411);
+            this.ClientSize = new System.Drawing.Size(617, 450);
             this.ControlBox = false;
             this.Controls.Add(this.pnl_Dashboard);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Conf);
             this.Controls.Add(this.lv_Result);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -333,8 +335,8 @@ namespace Microscript
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "RESTForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl_Conf.ResumeLayout(false);
+            this.pnl_Conf.PerformLayout();
             this.pnl_Dashboard.ResumeLayout(false);
             this.pnl_Dashboard.PerformLayout();
             this.grpBox_Auth.ResumeLayout(false);
@@ -346,7 +348,7 @@ namespace Microscript
         #endregion
 
         private System.Windows.Forms.ListView lv_Result;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Conf;
         private System.Windows.Forms.CheckBox cbx_Debug;
         private System.Windows.Forms.CheckBox cbx_XMLReport;
         private System.Windows.Forms.CheckBox cbx_InfoDisclo;
